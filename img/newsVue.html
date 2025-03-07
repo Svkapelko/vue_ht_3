@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <nav class="header">
+                <div class="header-container">
+                    <div class="logo-nav">
+                        <a href="#"><img class="logo-img" src="img/logo.png" alt="logo">
+                            <span class="logo-text h1-text">Interno</span>
+                        </a>
+                    </div>
+                    <div class="menubar">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="#" class="nav-link">Домой</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Проект</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Блог</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="blog-banner">
+                <div class="banner-wrapper">
+                    <!-- <img src="img/kitchen.png" alt="kitchen"> -->
+                    <div class="section-title">
+                        <h1 class="title-text">Статьи & <br>
+                            Новости</h1>
+                        <ul class="nav-footer">
+                            <li class="nav-item nav-item-footer"><a href="#" class="nav-link">Домой /</a></li>
+                            <li class="nav-item nav-item-footer"><a href="#" class="nav-link">Блог</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="blog">
+                <div class="blog-wrapper">
+                    <div class="post">
+                        <h1 class="title-text">Последний пост</h1>
+                        <div class="post-content">
+                            <div class="post-content-card">
+                                <div class="card card-news">
+                                    <div class="blog-card-image image-news">
+                                        <img src="img/latest post.png" alt="Дизайн кухни">
+                                    </div>
+                                    <div class="post-desc">
+                                        <h2 class="blog-card-text">Low Cost Latest Invented Interior Designing Ideas
+                                        </h2>
+                                        <p class="post-desc-text"> С того времени этот, похожий на латинский, текст стал
+                                            стандартом в печатной промышленности для примеров шрифтов и текстов. Перед
+                                            появлением электронных издательств дизайнеры импровизировали в работе над
+                                            макетами, изображая текст при помощи волнистых линий. С появлением
+                                            самоклеющихся наклеек с напечатанным текстом «Lorem ipsum» появился более
+                                            реалистичный способ обозначения расположения текста на странице</p>
+                                        <div class="card-bottom">
+                                            <p class="blog-card-text-date">26 Декабрь,2022</p>
+                                            <button class="card-button"><a href="#"><img src="img/Vector.png"
+                                                        alt="button"></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-top blog-top-news">
+                        <h1 class="title-text">Статьи & Новости</h1>
+                    </div>
+                    <div class="blog-content cards-container">
+
+                        <div v-for="(item, index) in cards" :key="index" class="card">
+                            <div class="blog-card-image card-header">
+                                <img :src="item.imageUrl" :alt="item.title">
+                                <p class="card-title blog-card-text-date"> {{ item.title }} </p>
+                            </div>
+                            <div class="blog-card-content card-body">
+                                <p class="blog-card-text"> {{ item.description }} </p>
+                                <div class="card-bottom">
+                                    <p class="blog-card-text-date"> {{ item.date}} </p>
+                                    <button class="card-button"><a href="#"><img src="img/Vector.png" alt="button"></a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-wrapper">
+                    <div class="logo">
+                        <div class="logo-nav">
+                            <a href="#"><img class="logo-img" src="img/logo.png" alt="logo">
+                                <span class="logo-text h1-text">Interno</span>
+                            </a>
+                        </div>
+                        <div class="icons">
+                            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="pages">
+                        <h1 class="blog-card-text">Страницы</h1>
+                        <ul class="nav-footer">
+                            <li class="nav-item nav-item-footer"><a href="#" class="nav-link">Домой</a></li>
+                            <li class="nav-item nav-item-footer"><a href="#" class="nav-link">Проект</a></li>
+                            <li class="nav-item nav-item-footer"><a href="#" class="nav-link">Блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="contacts">
+                        <h1 class="blog-card-text">Контакты</h1>
+                        <ul class="nav-footer">
+                            <li class="nav-item nav-item-footer nav-link nav-link-footer">55 East Birchwood Ave. <br>
+                                Brooklyn, New York 11201 </li>
+                            <li class="nav-item nav-item-footer nav-link nav-link-footer">contact@interno.com
+                            </li>
+                            <li class="nav-item nav-item-footer nav-link nav-link-footer">(123) 456 - 7890</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp, ref } = Vue
+
+        const app = createApp({
+            data() {
+                return {
+                    cards: [
+                        {
+                            title: 'Дизайн кухни',
+                            imageUrl: 'img/blog1.png',
+                            description: 'Создадим лучший макет перепланировки', 
+                            date: '26 Декабря, 2022', 
+                        },
+                        {
+                            title: 'Дизайн дома',
+                            imageUrl: 'img/blog2.png',
+                            description: 'Лучшие интерьерные идеи по низкой цене',
+                            date: '22 Декабря, 2022',
+                        },
+                        {
+                            title: 'Дизайн интерьера',
+                            description: 'Лучшие интерьерные решения для офисов',
+                            date: '25 Декабря, 2022',
+                            imageUrl: 'img/blog3.png'
+                        },
+                        {
+                            title: 'Дизайн кухни',
+                            imageUrl: 'img/blog1.png',
+                            description: 'Создадим лучший макет перепланировки', 
+                            date: '26 Декабря, 2022', 
+                        },
+                        {
+                            title: 'Дизайн дома',
+                            imageUrl: 'img/blog2.png',
+                            description: 'Лучшие интерьерные идеи по низкой цене',
+                            date: '22 Декабря, 2022',
+                           
+                        },
+                        {
+                            title: 'Дизайн интерьера',
+                            imageUrl: 'img/blog6.png',
+                            description: 'Лучшие интерьерные решения для офисов',
+                            date: '25 Декабря, 2022',
+                        },
+                    ],
+                }
+            },            
+        });
+        app.mount('#app');
+    </script>
+
+</body>
+
+</html>
